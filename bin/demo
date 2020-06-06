@@ -1,0 +1,61 @@
+#!/usr/bin/env ruby
+# frozen_string_literal: true
+
+require './lib/vending_machine'
+
+def line_break
+  puts '-' * 50
+end
+
+line_break
+print "Creating a new Vending Machine \n"
+line_break
+machine = VendingMachine.new
+
+#####################################
+
+line_break
+print "Purchase with change (selecting product before any money inserted) \n"
+line_break
+
+print "Selecting a Valid Product \n"
+machine.select_item(code: 3)
+
+print "Inserting a 1p coin \n"
+machine.insert_coin(amount: 1)
+
+print "Inserting a 10p coin \n"
+machine.insert_coin(amount: 10)
+
+print "Inserting a 10p coin \n"
+machine.insert_coin(amount: 20)
+
+print "Inserting a £1 coin \n"
+machine.insert_coin(amount: 100)
+
+sleep(5)
+
+######################################
+
+line_break
+print "Reloading a valid product \n"
+line_break
+
+print "Reloading product code 1 \n"
+machine.reload_item(code: 1, quantity: 10)
+
+sleep(5)
+
+#####################################
+
+machine = VendingMachine.new
+
+line_break
+print "Buying an Out of Stock item (selecting product after money inserted) \n"
+line_break
+
+print "Inserting a £1 coin \n"
+machine.insert_coin(amount: 100)
+
+print "Selecting a Valid Product \n"
+machine.select_item(code: 4)

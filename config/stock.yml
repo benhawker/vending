@@ -1,0 +1,23 @@
+- 
+  code: 1
+  name: "Drink 1"
+  price: 10
+  quantity: 2
+
+- 
+  code: 2
+  name: "Drink 2"
+  price: 20
+  quantity: 4
+
+-
+  code: 3
+  name: "Drink 3"
+  price: 50
+  quantity: 3
+
+-
+  code: 4
+  name: "Drink 3"
+  price: 100
+  quantity: 0
